@@ -1,4 +1,5 @@
 from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import CountVectorizer
 
 TEST = True
 
@@ -9,6 +10,7 @@ def main():
 
     if TEST:
         TestingSet(set)
+    WordVector(set.data)
 
 def RetrieveData(selector):
     if selector == 1:
@@ -27,5 +29,10 @@ def TestingSet(set):
     print("First lines first file:")
     print("\n".join(data[0].split("\n")[:3]))
     print()
+
+def WordVector(data):
+    count_vect = CountVectorizer()
+    X_train_counts = count_vect.fit_transform(data)
+    print(X_train_counts.shape)
 
 main()
