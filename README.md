@@ -1,1 +1,1 @@
-# TextAnalayticsSKLearn
+# TextAnalyticsSKLearn
