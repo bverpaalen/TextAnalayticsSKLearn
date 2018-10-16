@@ -34,5 +34,6 @@ def WordVector(data):
     count_vect = CountVectorizer()
     X_train_counts = count_vect.fit_transform(data)
     print(X_train_counts.shape)
+    print(count_vect.vocabulary_.get(u'algorithm')
 
 main()
